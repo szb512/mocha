@@ -1,7 +1,7 @@
 'use strict';
 
-var run = require('./helpers').runMocha;
-var runJSON = require('./helpers').runMochaJSON;
+var run = require('../helpers').runMocha;
+var runJSON = require('../helpers').runMochaJSON;
 
 describe('regressions', function() {
   it('issue-1327: should run all 3 specs exactly once', function(done) {

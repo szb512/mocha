@@ -1,6 +1,6 @@
 'use strict';
 
-var utils = require('../../lib/utils');
+var utils = require('../../../lib/utils');
 var fs = require('fs');
 var path = require('path');
 var os = require('os');

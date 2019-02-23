@@ -1,7 +1,7 @@
 'use strict';
 
 var assert = require('assert');
-var run = require('./helpers').runMochaJSON;
+var run = require('../helpers').runMochaJSON;
 var args = [];
 
 describe('multiple calls to done()', function() {

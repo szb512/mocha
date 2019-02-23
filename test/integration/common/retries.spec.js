@@ -1,9 +1,9 @@
 'use strict';
 
 var assert = require('assert');
-var helpers = require('./helpers');
+var helpers = require('../helpers');
 var args = [];
-var bang = require('../../lib/reporters/base').symbols.bang;
+var bang = require('../../../lib/reporters/base').symbols.bang;
 
 describe('retries', function() {
   it('are ran in correct order', function(done) {

@@ -1,7 +1,6 @@
 'use strict';
 
-var assert = require('assert');
-var run = require('./helpers').runMocha;
+var run = require('../helpers').runMocha;
 var args = [];
 
 describe('utils.deprecate test', function() {
@@ -14,7 +13,7 @@ describe('utils.deprecate test', function() {
           return done(err);
         }
         var result = res.output.match(/deprecated thing/g) || [];
-        assert.strictEqual(result.length, 2);
+        expect(result, 'to have length', 2);
         done();
       },
       {stdio: 'pipe'}

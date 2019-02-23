@@ -1,9 +1,9 @@
 'use strict';
 
 var assert = require('assert');
-var run = require('./helpers').runMochaJSON;
-var runMocha = require('./helpers').runMocha;
-var splitRegExp = require('./helpers').splitRegExp;
+var run = require('../helpers').runMochaJSON;
+var runMocha = require('../helpers').runMocha;
+var splitRegExp = require('../helpers').splitRegExp;
 var args = [];
 
 describe('pending', function() {

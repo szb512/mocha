@@ -1,9 +1,9 @@
 'use strict';
 
 var assert = require('assert');
-var runMocha = require('./helpers').runMocha;
-var runMochaJSON = require('./helpers').runMochaJSON;
-var splitRegExp = require('./helpers').splitRegExp;
+var runMocha = require('../helpers').runMocha;
+var runMochaJSON = require('../helpers').runMochaJSON;
+var splitRegExp = require('../helpers').splitRegExp;
 var args = ['--reporter', 'dot'];
 
 describe('hooks', function() {

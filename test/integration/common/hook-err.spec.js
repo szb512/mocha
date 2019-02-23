@@ -1,10 +1,10 @@
 'use strict';
 
-var helpers = require('./helpers');
+var helpers = require('../helpers');
 var runMocha = helpers.runMocha;
-var runMochaJSON = require('./helpers').runMochaJSON;
+var runMochaJSON = require('../helpers').runMochaJSON;
 var splitRegExp = helpers.splitRegExp;
-var bang = require('../../lib/reporters/base').symbols.bang;
+var bang = require('../../../lib/reporters/base').symbols.bang;
 
 describe('hook error handling', function() {
   var lines;

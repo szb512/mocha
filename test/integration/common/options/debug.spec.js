@@ -1,6 +1,6 @@
 'use strict';
 
-var helpers = require('../helpers');
+var helpers = require('../_helpers');
 var invokeMocha = helpers.invokeMocha;
 var DEFAULT_FIXTURE = helpers.DEFAULT_FIXTURE;
 

@@ -3,7 +3,7 @@
 // this is not a "functional" test; we aren't invoking the mocha executable.
 // instead we just avoid test doubles.
 
-var loadConfig = require('../../lib/cli/config').loadConfig;
+var loadConfig = require('../../../lib/cli/config').loadConfig;
 var path = require('path');
 
 describe('config', function() {

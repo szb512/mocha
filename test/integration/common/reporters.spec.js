@@ -4,8 +4,8 @@ var os = require('os');
 var fs = require('fs');
 var crypto = require('crypto');
 var path = require('path');
-var run = require('./helpers').runMocha;
-var utils = require('../../lib/utils');
+var run = require('../helpers').runMocha;
+var utils = require('../../../lib/utils');
 var dQuote = utils.dQuote;
 
 describe('reporters', function() {

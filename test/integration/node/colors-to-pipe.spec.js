@@ -3,7 +3,7 @@
 var childProcess = require('child_process');
 var path = require('path');
 
-describe('mocha binary', function() {
+describe('mocha executable', function() {
   it('should not output colors to pipe', function(done) {
     var command = [path.join('bin', 'mocha'), '--grep', 'missing-test'];
     childProcess.execFile(process.execPath, command, function(err, stdout) {

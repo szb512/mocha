@@ -6,6 +6,37 @@ var path = require('path');
 var node = '"' + process.execPath + '"';
 
 describe('globbing', function() {
+  describe('with multiple require extensions', function() {
+    it('should find a file of each type', function(done) {
+      exec(
+        '"' +
+          process.execPath +
+          '" "' +
+          path.join('bin', 'mocha') +
+          '" -R json --require coffee-script/register --require test/integration/node/fixtures/require-extension/register-foo.js "test/integration/node/fixtures/require-extension/*.@(coffee|foo)"',
+        function(error, stdout) {
+          if (error && !stdout) {
+            return done(error);
+          }
+          var results = JSON.parse(stdout);
+          expect(results, 'to have property', 'tests');
+          var titles = [];
+          for (var index = 0; index < results.tests.length; index += 1) {
+            expect(results.tests[index], 'to have property', 'fullTitle');
+            titles.push(results.tests[index].fullTitle);
+          }
+          expect(
+            titles,
+            'to contain',
+            'coffeescript should work',
+            'custom compiler should work'
+          ).and('to have length', 2);
+          done();
+        }
+      );
+    });
+  });
+
   describe('by the shell', function() {
     it('should find the first level test', function(done) {
       testGlob.shouldSucceed(
@@ -199,7 +230,7 @@ function execMochaWith(validate) {
     exec(
       node +
         ' "' +
-        path.join('..', '..', '..', '..', 'bin', 'mocha') +
+        path.join(__dirname, '..', '..', '..', 'bin', 'mocha') +
         '" -R json-stream --no-config ' +
         glob,
       {cwd: path.join(__dirname, 'fixtures', 'glob')},

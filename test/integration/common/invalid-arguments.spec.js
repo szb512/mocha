@@ -1,6 +1,6 @@
 'use strict';
 
-var invokeMocha = require('./helpers').invokeMocha;
+var invokeMocha = require('../helpers').invokeMocha;
 
 describe('invalid arguments', function() {
   it('should exit with failure if arguments are invalid', function(done) {
